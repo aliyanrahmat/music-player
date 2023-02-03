@@ -1,0 +1,17 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    margin-top: 30px;
+    background-color: rgb(6, 126, 169);
+    text-align: center;
+}
+ul{
+    color: aliceblue;
+    text-transform: capitalize;
+    cursor: pointer;
+    margin-top: 20px;
+    font-size: 30px;
+}

@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="./style.css">
+  <title>Music Player</title>
+</head>
+<body>
+  <div id="player">
+    <audio src="song1.mp3" controls></audio>
+    <ul id="song-list">
+      <!-- Song list will be generated here -->
+    </ul>
+  </div>
+  <script>
+    const audioElement = document.querySelector('audio');
+    const songList = document.querySelector('#song-list');
+
+    const songs = [
+      {
+        title: 'chupana be nahe ata',
+        artist: '',
+        url: 'chupana.mp3'
+      },
+      {
+        title: 'dil dadeya hay ',
+        artist: '',
+        url: 'song1.mp3'
+      },
+      {
+        title: 'rafta rafta wo maray',
+        artist: '',
+        url: 'rafta 1.mp3'
+      },
+      {
+        title: 'qurat ul baloch',
+        artist: '',
+        url: 'quarat baloch.mp3'
+      },
+      {
+        title: 'tikatay balas bada xay',
+        artist: '',
+        url: 'tikatay.mp3'
+      },
+      {
+        title: 'zara zara bahakta hay',
+        artist: '',
+        url: 'zar zar song.mp3'
+      }
+    ];
+
+    // Generate the song list
+    songs.forEach(song => {
+      const li = document.createElement('li');
+      li.innerHTML = `${song.title} - ${song.artist}`;
+      li.addEventListener('click', () => {
+        audioElement.src = song.url;
+        audioElement.play();
+      });
+      songList.appendChild(li);
+    });
+  </script>
+</body>
+</html>
